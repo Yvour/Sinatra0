@@ -1,0 +1,11 @@
+<%# views/posts/delete.erb %>
+<% if @meal %>
+  <p>Are you sure?</p>
+  <form action="/meals/<%= @meal.id %>/" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Yes, Delete It!">
+    <a href="<%="#{SITE_URL}"%>/meals/<%= @meal.id %>/">Cancel</a>
+  </form>
+<% else %>
+  <p>Table not found.</p>
+<% end %>

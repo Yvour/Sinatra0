@@ -1,0 +1,11 @@
+<%# views/table/delete.erb %>
+<% if @table %>
+  <p>Are you sure?</p>
+  <form action="/tables/<%= @table.id %>/" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Yes, Delete It!">
+    <a href="<%="#{SITE_URL}"%>/tables/<%= @table.id %>/">Cancel</a>
+  </form>
+<% else %>
+  <p>Table not found.</p>
+<% end %>

@@ -1,0 +1,4 @@
+<%# views/index.erb %>
+<% @tables.each do |table| %>
+  <a href="/tables/<%= table.id %>/"><%= table.number %></a>
+<% end %>

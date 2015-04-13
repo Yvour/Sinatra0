@@ -1,0 +1,12 @@
+<%# views/index.erb %>
+  <a href="/table_orders/new">New Table Order</a>
+<table>
+<% @table_orders.each do |table_order| %>
+<tr><td>
+  <a href="/table_orders/<%= table_order.id %>/"><%= table_order.created_at %> 
+  Waiter: <%= table_order.waiter.waiter_name %> Table:<%= table_order.table.number %> Amount: <%= table_order.amount %></a>
+</td>
+
+</tr>
+<% end %>
+</table>

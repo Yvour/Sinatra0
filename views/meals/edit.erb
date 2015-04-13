@@ -1,0 +1,10 @@
+<a href = "/meals/<%= @meal.id %>/delete/">  delete this meal</a> 
+
+<form method="post" action="/meals/<%= @meal.id %>/edit/" >
+  <input type = "hidden" name="_method" value = "put">
+  <label for="name"><strong>Meal name:</strong></label>
+  <input id="name" type="text" name="name" value="<%= @meal.name %>" style="width: 250px;">
+  <label for="price"><strong>Meal price </strong></label>
+   <input id="price" type="text" name="price" value="<%= @meal.price %>" style="width: 250px;">
+ <input id="post_submit" name="commit" type="submit" value="Save">
+</form>

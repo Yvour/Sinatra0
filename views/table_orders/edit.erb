@@ -1,0 +1,10 @@
+<a href = "/tables/<%= @table.id %>/delete/">  delete this table</a> 
+
+<form method="post" action="/tables/<%= @table.id %>/edit/" >
+  <input type = "hidden" name="_method" value = "put">
+  <label for="number"><strong>Table number:</strong></label>
+  <input id="number" type="text" name="number" value="<%= @table.number %>" style="width: 250px;">
+  <label for="description"><strong>Table description:</strong></label>
+  <textarea id="description" name="description" style="height: 250px;"><%= @table.description %></textarea>
+ <input id="post_submit" name="commit" type="submit" value="Save">
+</form>

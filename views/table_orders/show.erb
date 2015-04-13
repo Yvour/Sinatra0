@@ -1,0 +1,11 @@
+<%# views/index.erb %>
+
+  <a href="/table_orders/<%= @table_order.id %>/edit/">
+            
+            <%= @table_order.waiter.waiter_name%>  edit it</a>
+
+  <div>
+          <%=  @table_order.table.number %>
+          <%=  @table_order.amount %>
+          <%=  @table_order.created_at %> 
+  </div>
